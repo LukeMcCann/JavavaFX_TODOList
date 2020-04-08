@@ -91,14 +91,21 @@
     <!--
         When aligning labels to the center remember they will only take up the space required for the text,
         to center them correctly the alignment property must be used.
+
+        Remember the center position acquires whatever space is left over after the other positions are created.
      -->
     <top>
-        <Label text="Confirmation" alignment="CENTER"
-        BorderPane.alignment="CENTER"/>
+        <Label text="Top" BorderPane.alignment="CENTER"/>
     </top>
+    <left>
+        <Label text="Left" alignment="CENTER" />
+    </left>
+    <right>
+        <Label text="Right" alignment="CENTER" />
+    </right>
 
     <center>
-        <Label text="Are you sure you want to do this?" alignment="CENTER" />
+        <Label text="Center" alignment="CENTER" />
     </center>
 
     <bottom>
