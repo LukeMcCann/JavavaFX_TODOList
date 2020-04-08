@@ -1,13 +1,16 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<!--<VBox fx:controller="com.planetdebug.bookingsystem.MainController"-->
-<!--      xmlns:fx="http://javafx.com/fxml" alignment="top_center">-->
 
-<!--    <Button text="Okay" />-->
-<!--    <Button text="Cancel" />-->
-<!--    <Button text="Help" />-->
-<!--</VBox>-->
+<!--
+<VBox fx:controller="com.planetdebug.bookingsystem.MainController"
+      xmlns:fx="http://javafx.com/fxml" alignment="top_center">
+
+    <Button text="Okay" />
+    <Button text="Cancel" />
+    <Button text="Help" />
+</VBox>
+-->
 
 <!--
     HBox lays out its children horizontally in a single row, sizes its children to their preferred widths (if any).
@@ -66,3 +69,24 @@
 <!--    <Button text="Super long button name" GridPane.rowIndex="3" GridPane.columnIndex="0"-->
 <!--    GridPane.columnSpan="2" GridPane.halignment="CENTER"/>-->
 <!--</GridPane>-->
+
+
+<!--
+    BorderPane is commonly used for top-level windows, when using a borderpane you can place controls into one of
+    five positions (top, bottom, left, right, center).
+
+    BorderPane resizing behaviour is usually as we expect it to be.
+ -->
+
+<BorderPane fx:controller="com.planetdebug.bookingsystem.MainController"
+            xmlns:fx="http://javafx.com/fxml">
+    <HBox spacing="10">
+        <padding>
+            <Insets bottom="10" right="10" />
+        </padding>
+
+        <Button text="Okay" prefWidth="90" />
+        <Button text="Cancel" prefWidth="90" />
+        <Button text="Help" prefWidth="90" />
+    </HBox>
+</BorderPane>
