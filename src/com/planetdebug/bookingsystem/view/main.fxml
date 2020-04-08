@@ -25,6 +25,15 @@
           xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10"
             gridLinesVisible="true">
 
+    <!--
+        ColumnConstraints allows additional constraints, in this circumstance each column is set to 50% width.
+        The ordering of columnConstraints is important.
+     -->
+    <columnConstraints>
+        <ColumnConstraints percentWidth="50.0" />
+        <ColumnConstraints percentWidth="50.0" />
+    </columnConstraints>
+
     <Button text="Okay" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
     <Button text="Cancel" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
     <Button text="Help" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
