@@ -9,43 +9,52 @@
 <!--    <Button text="Help" />-->
 <!--</VBox>-->
 
-<!--<HBox fx:controller="com.planetdebug.bookingsystem.MainController"-->
-<!--      xmlns:fx="http://javafx.com/fxml" alignment="top_center">-->
+<!--
+    HBox lays out its children horizontally in a single row, sizes its children to their preferred widths (if any).
+    If there is any space left over it will stretch itself to fill additional height, if it is false it will
+    resize its children to fill the excess.
 
-<!--<Button text="Okay" />-->
-<!--<Button text="Cancel" />-->
-<!--<Button text="Help" />-->
-<!--</HBox>-->
+    For children which cannot be resized this way the space will remain empty.
+-->
+<HBox fx:controller="com.planetdebug.bookingsystem.MainController"
+      xmlns:fx="http://javafx.com/fxml" alignment="top_center"
+        style="-fx-border-color: red; -fx-border-width: 3; -fx-border-style: dashed;">
+
+    <Button text="Okay" />
+    <Button text="Cancel" />
+    <Button text="Help" />
+</HBox>
 
 <!--
     Overlapping occurs in the GridPane if you do not display each components position, as they will be set to default position
     hgap and vgap are the pixels of space between components horizontally and vertically.
 -->
-<GridPane fx:controller="com.planetdebug.bookingsystem.MainController"
-          xmlns:fx="http://javafx.com/fxml" alignment="top_center" hgap="10" vgap="10"
-            gridLinesVisible="true">
 
-    <!--
-        ColumnConstraints allows additional constraints, in this circumstance each column is set to 50% width.
-        The ordering of columnConstraints is important.
-     -->
-    <columnConstraints>
-        <ColumnConstraints percentWidth="50.0" />
-        <ColumnConstraints percentWidth="50.0" />
-    </columnConstraints>
+<!--<GridPane fx:controller="com.planetdebug.bookingsystem.MainController"-->
+<!--          xmlns:fx="http://javafx.com/fxml" alignment="top_center" hgap="10" vgap="10"-->
+<!--            gridLinesVisible="true">-->
 
-    <!--Adds 10 pixel gap to top-->
-    <padding>
-        <Insets top="10" />
-    </padding>
+<!--    &lt;!&ndash;-->
+<!--        ColumnConstraints allows additional constraints, in this circumstance each column is set to 50% width.-->
+<!--        The ordering of columnConstraints is important.-->
+<!--     &ndash;&gt;-->
+<!--    <columnConstraints>-->
+<!--        <ColumnConstraints percentWidth="50.0" />-->
+<!--        <ColumnConstraints percentWidth="50.0" />-->
+<!--    </columnConstraints>-->
 
-    <!--Ordering does not matter, elements are created based on column/row indices-->
-    <Button text="Okay" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
-    <Button text="Cancel" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
-    <Button text="Help" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
-    <Button text="Next" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
-    <Button text="Previous" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
-    <Button text="Hello" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
-    <Button text="Super long button name" GridPane.rowIndex="3" GridPane.columnIndex="0"
-    GridPane.columnSpan="2" GridPane.halignment="CENTER"/>
-</GridPane>
+<!--    &lt;!&ndash;Adds 10 pixel gap to top&ndash;&gt;-->
+<!--    <padding>-->
+<!--        <Insets top="10" />-->
+<!--    </padding>-->
+
+<!--    &lt;!&ndash;Ordering does not matter, elements are created based on column/row indices&ndash;&gt;-->
+<!--    <Button text="Okay" GridPane.rowIndex="0" GridPane.columnIndex="0"/>-->
+<!--    <Button text="Cancel" GridPane.rowIndex="0" GridPane.columnIndex="1"/>-->
+<!--    <Button text="Help" GridPane.rowIndex="1" GridPane.columnIndex="0"/>-->
+<!--    <Button text="Next" GridPane.rowIndex="1" GridPane.columnIndex="1"/>-->
+<!--    <Button text="Previous" GridPane.rowIndex="2" GridPane.columnIndex="0"/>-->
+<!--    <Button text="Hello" GridPane.rowIndex="2" GridPane.columnIndex="1"/>-->
+<!--    <Button text="Super long button name" GridPane.rowIndex="3" GridPane.columnIndex="0"-->
+<!--    GridPane.columnSpan="2" GridPane.halignment="CENTER"/>-->
+<!--</GridPane>-->
