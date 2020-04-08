@@ -87,6 +87,9 @@
 
 <BorderPane fx:controller="com.planetdebug.bookingsystem.MainController"
             xmlns:fx="http://javafx.com/fxml">
+    <center>
+        <Label text="Are you sure you want to do this?" alignment="CENTER" />
+    </center>
 
     <bottom>
         <HBox spacing="10" alignment="bottom_right">
