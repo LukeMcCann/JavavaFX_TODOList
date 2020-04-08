@@ -127,8 +127,25 @@
             unless the user resizes the window making it not possible to show all in flowLayout.
         -->
 
+<!--<FlowPane fx:controller="com.planetdebug.bookingsystem.MainController" xmlns:fx="http://javafx.com/fxml"-->
+<!--    orientation="HORIZONTAL">-->
+
+<!--    <Button text="Button1" />-->
+<!--    <Button text="Button2" />-->
+<!--    <Button text="Button3" />-->
+<!--    <Button text="Button4" />-->
+<!--    <Button text="Button5" />-->
+<!--    <Button text="Button6" />-->
+<!--    <Button text="Button7" />-->
+<!--    <Button text="Button8" />-->
+<!--    <Button text="Button9" />-->
+<!--    <Button text="Button10" />-->
+
+<!--</FlowPane>-->
+
+
 <FlowPane fx:controller="com.planetdebug.bookingsystem.MainController" xmlns:fx="http://javafx.com/fxml"
-    orientation="HORIZONTAL">
+          orientation="VERTICAL">
 
     <Button text="Button1" />
     <Button text="Button2" />
