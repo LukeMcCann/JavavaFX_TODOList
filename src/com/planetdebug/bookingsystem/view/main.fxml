@@ -17,9 +17,13 @@
 <!--<Button text="Help" />-->
 <!--</HBox>-->
 
-<!--Overlapping occurs in the GridPane if you do not display each components position, as they will be set to default position-->
+<!--
+    Overlapping occurs in the GridPane if you do not display each components position, as they will be set to default position
+    hgap and vgap are the pixels of space between components horizontally and vertically.
+-->
 <GridPane fx:controller="com.planetdebug.bookingsystem.MainController"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10"
+            gridLinesVisible="true">
 
     <Button text="Okay" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
     <Button text="Cancel" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
