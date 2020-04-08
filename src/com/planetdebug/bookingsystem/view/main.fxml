@@ -80,13 +80,16 @@
     BorderPane does not support the alignment property as it would not make sense due to there being multiple
     locations within the BorderPane. As such, elements in the BorderPane are aligned by these specific locations
     by adding them as a parent of the property.
+
+    When using BorderPanes we use nested layouts to contain other elements.
+    Each position may only have one child, therefore we cannot add elements individually to positions.
  -->
 
 <BorderPane fx:controller="com.planetdebug.bookingsystem.MainController"
             xmlns:fx="http://javafx.com/fxml">
 
     <bottom>
-        <HBox spacing="10">
+        <HBox spacing="10" alignment="bottom_right">
             <padding>
                 <Insets bottom="10" right="10" />
             </padding>
