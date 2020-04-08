@@ -15,20 +15,23 @@
     resize its children to fill the excess.
 
     For children which cannot be resized this way the space will remain empty.
+
+    HBox is not normally used for a top-layer window due to the simplicity of the layout. It would usually be utilised
+    in a dialogue situation as the child of another layout.
 -->
-<HBox fx:controller="com.planetdebug.bookingsystem.MainController"
-      xmlns:fx="http://javafx.com/fxml" alignment="bottom_right"
-        style="-fx-border-color: red; -fx-border-width: 3; -fx-border-style: dashed;"
-        spacing="10">
+<!--<HBox fx:controller="com.planetdebug.bookingsystem.MainController"-->
+<!--      xmlns:fx="http://javafx.com/fxml" alignment="bottom_right"-->
+<!--        style="-fx-border-color: red; -fx-border-width: 3; -fx-border-style: dashed;"-->
+<!--        spacing="10">-->
 
-    <padding>
-        <Insets bottom="10" right="10" />
-    </padding>
+<!--    <padding>-->
+<!--        <Insets bottom="10" right="10" />-->
+<!--    </padding>-->
 
-    <Button text="Okay" prefWidth="90"/>
-    <Button text="Cancel" prefWidth="90"/>
-    <Button text="Help" prefWidth="90"/>
-</HBox>
+<!--    <Button text="Okay" prefWidth="90"/>-->
+<!--    <Button text="Cancel" prefWidth="90"/>-->
+<!--    <Button text="Help" prefWidth="90"/>-->
+<!--</HBox>-->
 
 <!--
     Overlapping occurs in the GridPane if you do not display each components position, as they will be set to default position
