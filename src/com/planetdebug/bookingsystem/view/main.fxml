@@ -85,39 +85,60 @@
     Each position may only have one child, therefore we cannot add elements individually to positions.
  -->
 
-<BorderPane fx:controller="com.planetdebug.bookingsystem.MainController"
-            xmlns:fx="http://javafx.com/fxml">
+<!--<BorderPane fx:controller="com.planetdebug.bookingsystem.MainController"-->
+<!--            xmlns:fx="http://javafx.com/fxml">-->
 
-    <!--
-        When aligning labels to the center remember they will only take up the space required for the text,
-        to center them correctly the alignment property must be used.
+<!--    &lt;!&ndash;-->
+<!--        When aligning labels to the center remember they will only take up the space required for the text,-->
+<!--        to center them correctly the alignment property must be used.-->
 
-        Remember the center position acquires whatever space is left over after the other positions are created.
-     -->
-    <top>
-        <Label text="Top" BorderPane.alignment="CENTER"/>
-    </top>
-    <left>
-        <Label text="Left" alignment="CENTER" />
-    </left>
-    <right>
-        <Label text="Right" alignment="CENTER" />
-    </right>
+<!--        Remember the center position acquires whatever space is left over after the other positions are created.-->
+<!--     &ndash;&gt;-->
+<!--    <top>-->
+<!--        <Label text="Top" BorderPane.alignment="CENTER"/>-->
+<!--    </top>-->
+<!--    <left>-->
+<!--        <Label text="Left" alignment="CENTER" />-->
+<!--    </left>-->
+<!--    <right>-->
+<!--        <Label text="Right" alignment="CENTER" />-->
+<!--    </right>-->
 
-    <center>
-        <Label text="Center" alignment="CENTER" />
-    </center>
+<!--    <center>-->
+<!--        <Label text="Center" alignment="CENTER" />-->
+<!--    </center>-->
 
-    <bottom>
-        <HBox spacing="10" alignment="bottom_right">
-            <padding>
-                <Insets bottom="10" right="10" />
-            </padding>
+<!--    <bottom>-->
+<!--        <HBox spacing="10" alignment="bottom_right">-->
+<!--            <padding>-->
+<!--                <Insets bottom="10" right="10" />-->
+<!--            </padding>-->
 
-            <Button text="Okay" prefWidth="90" />
-            <Button text="Cancel" prefWidth="90" />
-            <Button text="Help" prefWidth="90" />
-        </HBox>
-    </bottom>
+<!--            <Button text="Okay" prefWidth="90" />-->
+<!--            <Button text="Cancel" prefWidth="90" />-->
+<!--            <Button text="Help" prefWidth="90" />-->
+<!--        </HBox>-->
+<!--    </bottom>-->
+<!--</BorderPane>-->
 
-</BorderPane>
+
+        <!--
+            FlowPane wraps its children, whilst hbox and vbox do so vertically and horizontally. Children will not be cut off
+            unless the user resizes the window making it not possible to show all in flowLayout.
+        -->
+
+<FlowPane fx:controller="com.planetdebug.bookingsystem.MainController" xmlns:fx="http://javafx.com/fxml"
+    orientation="HORIZONTAL">
+
+    <Button text="Button1" />
+    <Button text="Button2" />
+    <Button text="Button3" />
+    <Button text="Button4" />
+    <Button text="Button5" />
+    <Button text="Button6" />
+    <Button text="Button7" />
+    <Button text="Button8" />
+    <Button text="Button9" />
+    <Button text="Button10" />
+
+</FlowPane>
