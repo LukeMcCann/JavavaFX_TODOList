@@ -17,8 +17,9 @@
     For children which cannot be resized this way the space will remain empty.
 -->
 <HBox fx:controller="com.planetdebug.bookingsystem.MainController"
-      xmlns:fx="http://javafx.com/fxml" alignment="top_center"
-        style="-fx-border-color: red; -fx-border-width: 3; -fx-border-style: dashed;">
+      xmlns:fx="http://javafx.com/fxml" alignment="bottom_right"
+        style="-fx-border-color: red; -fx-border-width: 3; -fx-border-style: dashed;"
+        spacing="10">
 
     <Button text="Okay" />
     <Button text="Cancel" />
