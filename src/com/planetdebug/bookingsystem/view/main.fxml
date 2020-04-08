@@ -125,6 +125,9 @@
         <!--
             FlowPane wraps its children, whilst hbox and vbox do so vertically and horizontally. Children will not be cut off
             unless the user resizes the window making it not possible to show all in flowLayout.
+
+            FlowPanes make sense when you are unsure how many children there may be, or when you want children to wrap.
+            HBox or VBox are used when you don't want the children to wrap (e.g. adding buttons to the bottom of a dialog).
         -->
 
 <!--<FlowPane fx:controller="com.planetdebug.bookingsystem.MainController" xmlns:fx="http://javafx.com/fxml"-->
@@ -144,18 +147,36 @@
 <!--</FlowPane>-->
 
 
-<FlowPane fx:controller="com.planetdebug.bookingsystem.MainController" xmlns:fx="http://javafx.com/fxml"
-          orientation="VERTICAL">
+<!--<FlowPane fx:controller="com.planetdebug.bookingsystem.MainController" xmlns:fx="http://javafx.com/fxml"-->
+<!--          orientation="VERTICAL">-->
 
-    <Button text="Button1" />
-    <Button text="Button2" />
-    <Button text="Button3" />
-    <Button text="Button4" />
-    <Button text="Button5" />
-    <Button text="Button6" />
-    <Button text="Button7" />
-    <Button text="Button8" />
-    <Button text="Button9" />
-    <Button text="Button10" />
+<!--    <Button text="Button1" />-->
+<!--    <Button text="Button2" />-->
+<!--    <Button text="Button3" />-->
+<!--    <Button text="Button4" />-->
+<!--    <Button text="Button5" />-->
+<!--    <Button text="Button6" />-->
+<!--    <Button text="Button7" />-->
+<!--    <Button text="Button8" />-->
+<!--    <Button text="Button9" />-->
+<!--    <Button text="Button10" />-->
 
-</FlowPane>
+<!--</FlowPane>-->
+
+        <!--
+            TilePane is similar to flowPane, except every cell is allocated the same width.
+            Each tile has a width of the larges child.
+         -->
+<TilePane fx:controller="com.planetdebug.bookingsystem.MainController" xmlns:fx="http://javafx.com/fxml"
+            orientation="HORIZONTAL">
+        <Button text="Button1" />
+        <Button text="Button2" />
+        <Button text="Button3" />
+        <Button text="Button4" />
+        <Button text="Button5" />
+        <Button text="Button6" />
+        <Button text="Button7" />
+        <Button text="Button8" />
+        <Button text="Button9" />
+        <Button text="Button10" />
+</TilePane>
