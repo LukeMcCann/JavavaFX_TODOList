@@ -163,20 +163,33 @@
 
 <!--</FlowPane>-->
 
-        <!--
-            TilePane is similar to flowPane, except every cell is allocated the same width.
-            Each tile has a width of the larges child.
-         -->
-<TilePane fx:controller="com.planetdebug.bookingsystem.MainController" xmlns:fx="http://javafx.com/fxml"
-            orientation="HORIZONTAL">
-        <Button text="Button1" />
-        <Button text="Button2" />
-        <Button text="Button3" />
-        <Button text="Button4" />
-        <Button text="Button5" />
-        <Button text="Button6" />
-        <Button text="Button7" />
-        <Button text="Button8" />
-        <Button text="Button9" />
-        <Button text="Button10" />
-</TilePane>
+<!--        &lt;!&ndash;-->
+<!--            TilePane is similar to flowPane, except every cell is allocated the same width.-->
+<!--            Each tile has a width of the larges child.-->
+<!--         &ndash;&gt;-->
+<!--<TilePane fx:controller="com.planetdebug.bookingsystem.MainController" xmlns:fx="http://javafx.com/fxml"-->
+<!--            orientation="VERTICAL">-->
+<!--        <Button text="Button1" />-->
+<!--        <Button text="Button2" />-->
+<!--        <Button text="Button3" />-->
+<!--        <Button text="Button4" />-->
+<!--        <Button text="Button5" />-->
+<!--        <Button text="Button6" />-->
+<!--        <Button text="Button7" />-->
+<!--        <Button text="Button8" />-->
+<!--        <Button text="Button9" />-->
+<!--        <Button text="Button10" />-->
+<!--</TilePane>-->
+
+    <!--
+        Stacks content ontop of each other, the order matters with the topmost element being placed at the bottom of the
+        stack.
+
+        The 0th child is the bottom the last child is the top of the stack.
+     -->
+<StackPane fx:controller="com.planetdebug.bookingsystem.MainController" xmlns:fx="http://javafx.com/fxml">
+    <Button text="Hello Bottom" style="-fx-background-color: purple"/>
+    <Label text="Label Text" style="-fx-background-color: green" />
+    <Label text="Really quite very long label" style="-fx-background-color: orange" />
+    <Button text="Button1" style="-fx-background-color: red"/>
+</StackPane>
