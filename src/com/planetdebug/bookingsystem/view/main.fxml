@@ -32,6 +32,6 @@
         <ToggleGroup fx:id="colorToggleGroup" />
     </fx:define>
     <RadioButton GridPane.rowIndex="0" GridPane.columnIndex="2" text="red" toggleGroup="$colorToggleGroup" />
-    <RadioButton GridPane.rowIndex="0" GridPane.columnIndex="3" text="green" toggleGroup="$colorToggleGroup"/>
+    <RadioButton GridPane.rowIndex="0" GridPane.columnIndex="3" text="green" toggleGroup="$colorToggleGroup" selected="true"/>
     <RadioButton GridPane.rowIndex="0" GridPane.columnIndex="4" text="blue" toggleGroup="$colorToggleGroup"/>
 </GridPane>
