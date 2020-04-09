@@ -1,93 +1,10 @@
 <!--To use the java graphics repository the JAR must be added to dependencies as well as module-info-->
-<?import javafx.collections.FXCollections?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.Font?>
-<?import java.lang.String?>
+
+<?import javafx.scene.control.Slider?>
 <GridPane fx:controller="com.planetdebug.bookingsystem.MainController" xmlns:fx="http://javafx.com/fxml"
           alignment="CENTER" hgap="10" vgap="10">
-    <Button GridPane.rowIndex="0" GridPane.columnIndex="0" text="Click Me!"
-            defaultButton="true">
-        <graphic>
-            <ImageView>
-                <Image url="@/toolbarButtonGraphics/general/TipOfTheDay24.gif"/>
-            </ImageView>
-        </graphic>
-    </Button>
+    <Slider GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="4" min="0" max="100"
+            showTickLabels="true" showTickMarks="true"/>
 
-    <!--Labels do not wrap text by default, setting wrapText true enables this-->
-    <Label GridPane.columnIndex="1" GridPane.rowIndex="0" text="This is a very very long label that wraps its text to fit"
-           textFill="deepskyblue" wrapText="true">
-        <font>
-            <Font name="Arial italic" size="12"/>
-        </font>
-        <graphic>
-            <ImageView>
-                <Image url="@/toolbarButtonGraphics/general/Information24.gif" />
-            </ImageView>
-        </graphic>
-    </Label>
-
-    <!--It is best practice to place buttons inside a layout to set their position even if they are grouped-->
-    <fx:define>
-        <ToggleGroup fx:id="colorToggleGroup" />
-    </fx:define>
-    <VBox GridPane.rowIndex="0" GridPane.columnIndex="2">
-        <RadioButton text="red" toggleGroup="$colorToggleGroup" />
-        <RadioButton text="green" toggleGroup="$colorToggleGroup" selected="true"/>
-        <RadioButton text="blue" toggleGroup="$colorToggleGroup"/>
-    </VBox>
-
-
-    <VBox GridPane.rowIndex="0" GridPane.columnIndex="5" spacing="5">
-        <CheckBox text="Choice1" />
-        <CheckBox text="Choice2"/>
-        <CheckBox text="Choice3"/>
-        <CheckBox text="Choice4"/>
-    </VBox>
-
-    <fx:define>
-        <ToggleGroup fx:id="toggleGroup1" />
-    </fx:define>
-    <HBox GridPane.rowIndex="0" GridPane.columnIndex="6">
-        <ToggleButton text="Toggle1" toggleGroup="$toggleGroup1"/>
-        <ToggleButton text="Toggle2" toggleGroup="$toggleGroup1"/>
-        <ToggleButton text="Toggle3" toggleGroup="$toggleGroup1"/>
-        <ToggleButton text="Toggle4" toggleGroup="$toggleGroup1"/>
-    </HBox>
-
-    <TextField GridPane.columnIndex="0" GridPane.rowIndex="1"  text="Text Field."/>
-    <PasswordField GridPane.rowIndex="1" GridPane.columnIndex="1" text="Password Field." />
-
-    <!--ComboBox can be set to be editable-->
-    <ComboBox GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="2">
-        <items>
-            <FXCollections fx:factory="observableArrayList">
-                <String fx:value="Option1"/>
-                <String fx:value="Option2" />
-                <String fx:value="Option3" />
-                <String fx:value="Option4" />
-            </FXCollections>
-        </items>
-        <value>
-            <String fx:value="Option1" />
-        </value>
-    </ComboBox>
-
-    <!--ChoiceBox is for small sets (< 10) while ComboBox is for larger sets-->
-    <ChoiceBox GridPane.rowIndex="2" GridPane.columnIndex="1" GridPane.columnSpan="2">
-        <items>
-            <FXCollections fx:factory="observableArrayList">
-                <String fx:value="Choice1" />
-                <String fx:value="Choice2" />
-                <String fx:value="Choice3" />
-                <String fx:value="Choice4" />
-            </FXCollections>
-        </items>
-        <value>
-            <String fx:value="Choice1" />
-        </value>
-    </ChoiceBox>
 </GridPane>
