@@ -186,6 +186,8 @@
         stack.
 
         The 0th child is the bottom the last child is the top of the stack.
+
+        StackPane can be used for imposing text over images or other layered content.
      -->
 <StackPane fx:controller="com.planetdebug.bookingsystem.MainController" xmlns:fx="http://javafx.com/fxml">
     <Button text="Hello Bottom" style="-fx-background-color: purple"/>
