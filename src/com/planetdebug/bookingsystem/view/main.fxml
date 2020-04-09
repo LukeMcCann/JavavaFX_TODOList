@@ -42,5 +42,10 @@
         <CheckBox text="Choice4"/>
     </VBox>
 
-    <ToggleButton text="Toggle Me!" GridPane.rowIndex="0" GridPane.columnIndex="6"/>
+    <HBox GridPane.rowIndex="0" GridPane.columnIndex="6">
+        <ToggleButton text="Toggle1"/>
+        <ToggleButton text="Toggle2"/>
+        <ToggleButton text="Toggle3"/>
+        <ToggleButton text="Toggle4"/>
+    </HBox>
 </GridPane>
