@@ -8,6 +8,6 @@
     <Slider GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="4" min="0" max="100"
             showTickLabels="true" showTickMarks="true" minorTickCount="4" snapToTicks="true"/>
 
-    <Spinner GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.columnSpan="3" min="0" max="100"/>
-
+    <Spinner GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.columnSpan="3" min="0" max="100" editable="true"
+             initialValue="50"/>
 </GridPane>
