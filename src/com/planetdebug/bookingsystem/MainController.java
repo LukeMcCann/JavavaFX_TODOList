@@ -15,6 +15,12 @@ public class MainController
     @FXML
     private Button goodbyeButton;
 
+    @FXML
+    public void initialize() {
+        helloButton.setDisable(true);
+        goodbyeButton.setDisable(true);
+    }
+
     // It is best practice to annotate EventHandlers for other developers to easily derive which methods are handlers.
     // Using an ActionEvent means we don't need a separate handler for each control, by using e.getSource() we can tell
     // which component has been interacted with.
@@ -32,5 +38,16 @@ public class MainController
         {
             System.out.println("Goodbye, " + this.nameField.getText());
         }
+    }
+
+    private boolean textFieldIsEmpty()
+    {
+        return(nameField.getText().isEmpty() || nameField.getText().trim().isEmpty());
+    }
+
+    @FXML
+    public void handleKeyReleased() {
+        helloButton.setDisable(textFieldIsEmpty());
+        goodbyeButton.setDisable(textFieldIsEmpty());
     }
 }
