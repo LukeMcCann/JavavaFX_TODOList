@@ -35,5 +35,10 @@
     <RadioButton GridPane.rowIndex="0" GridPane.columnIndex="3" text="green" toggleGroup="$colorToggleGroup" selected="true"/>
     <RadioButton GridPane.rowIndex="0" GridPane.columnIndex="4" text="blue" toggleGroup="$colorToggleGroup"/>
 
-    <CheckBox text="Subscribe to our newsletter" GridPane.rowIndex="3" indeterminate="true" />
+    <VBox GridPane.rowIndex="0" GridPane.columnIndex="5" spacing="5">
+        <CheckBox text="Choice1" />
+        <CheckBox text="Choice2"/>
+        <CheckBox text="Choice3"/>
+        <CheckBox text="Choice4"/>
+    </VBox>
 </GridPane>
