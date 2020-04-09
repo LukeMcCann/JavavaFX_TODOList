@@ -28,12 +28,16 @@
         </graphic>
     </Label>
 
+    <!--It is best practice to place buttons inside a layout to set their position even if they are grouped-->
     <fx:define>
         <ToggleGroup fx:id="colorToggleGroup" />
     </fx:define>
-    <RadioButton GridPane.rowIndex="0" GridPane.columnIndex="2" text="red" toggleGroup="$colorToggleGroup" />
-    <RadioButton GridPane.rowIndex="0" GridPane.columnIndex="3" text="green" toggleGroup="$colorToggleGroup" selected="true"/>
-    <RadioButton GridPane.rowIndex="0" GridPane.columnIndex="4" text="blue" toggleGroup="$colorToggleGroup"/>
+    <VBox GridPane.rowIndex="0" GridPane.columnIndex="2">
+        <RadioButton text="red" toggleGroup="$colorToggleGroup" />
+        <RadioButton text="green" toggleGroup="$colorToggleGroup" selected="true"/>
+        <RadioButton text="blue" toggleGroup="$colorToggleGroup"/>
+    </VBox>
+
 
     <VBox GridPane.rowIndex="0" GridPane.columnIndex="5" spacing="5">
         <CheckBox text="Choice1" />
