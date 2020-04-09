@@ -42,10 +42,14 @@
         <CheckBox text="Choice4"/>
     </VBox>
 
+    <fx:define>
+        <ToggleGroup fx:id="toggleGroup1" />
+    </fx:define>
     <HBox GridPane.rowIndex="0" GridPane.columnIndex="6">
-        <ToggleButton text="Toggle1"/>
-        <ToggleButton text="Toggle2"/>
-        <ToggleButton text="Toggle3"/>
-        <ToggleButton text="Toggle4"/>
+        <ToggleButton text="Toggle1" toggleGroup="$toggleGroup1"/>
+        <ToggleButton text="Toggle2" toggleGroup="$toggleGroup1"/>
+        <ToggleButton text="Toggle3" toggleGroup="$toggleGroup1"/>
+        <ToggleButton text="Toggle4" toggleGroup="$toggleGroup1"/>
     </HBox>
+
 </GridPane>
