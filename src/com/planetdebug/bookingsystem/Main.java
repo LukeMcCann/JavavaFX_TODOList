@@ -12,8 +12,8 @@ public class Main extends Application
     public void start(Stage primaryStage) throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("view/main.fxml"));
-        primaryStage.setTitle("JavaFX_Layouts");
-        primaryStage.setScene(new Scene(root, 700, 275));
+        primaryStage.setTitle("JavaFX_Controls");
+        primaryStage.setScene(new Scene(root, 800, 500));
         primaryStage.show();
     }
 
