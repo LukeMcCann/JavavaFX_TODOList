@@ -61,6 +61,7 @@
     <TextField GridPane.columnIndex="0" GridPane.rowIndex="1"  text="Text Field."/>
     <PasswordField GridPane.rowIndex="1" GridPane.columnIndex="1" text="Password Field." />
 
+    <!--ComboBox can be set to be editable-->
     <ComboBox GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="2">
         <items>
             <FXCollections fx:factory="observableArrayList">
@@ -74,4 +75,19 @@
             <String fx:value="Option1" />
         </value>
     </ComboBox>
+
+    <!--ChoiceBox is for small sets (< 10) while ComboBox is for larger sets-->
+    <ChoiceBox GridPane.rowIndex="2" GridPane.columnIndex="1" GridPane.columnSpan="2">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Choice1" />
+                <String fx:value="Choice2" />
+                <String fx:value="Choice3" />
+                <String fx:value="Choice4" />
+            </FXCollections>
+        </items>
+        <value>
+            <String fx:value="Choice1" />
+        </value>
+    </ChoiceBox>
 </GridPane>
