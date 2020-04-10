@@ -1,6 +1,9 @@
 package com.planetdebug.todolist;
 
 import com.planetdebug.todolist.model.TodoItem;
+import javafx.fxml.FXML;
+import javafx.scene.control.ListView;
+import javafx.scene.control.SelectionMode;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -10,6 +13,9 @@ import java.util.List;
 public class MainController
 {
     private List<TodoItem> todoItems;
+
+    @FXML
+    private ListView todoListView;
 
     public void initialize()
     {
@@ -34,5 +40,8 @@ public class MainController
         todoItems.add(item3);
         todoItems.add(item4);
         todoItems.add(item5);
+
+        todoListView.getItems().setAll(todoItems);
+        todoListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
 }
