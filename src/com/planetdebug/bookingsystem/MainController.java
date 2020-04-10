@@ -35,12 +35,17 @@ public class MainController
         if(e.getSource().equals(helloButton))
         {
             say("Hello, " + this.nameField.getText());
-            if(this.checkBox.isSelected()) { nameField.clear(); }
         }
         else if(e.getSource().equals(goodbyeButton))
         {
             say("Goodbye, " + this.nameField.getText());
-            if(this.checkBox.isSelected()) { nameField.clear(); }
+        }
+//        simulateApplicationDeadlock();
+        if(this.checkBox.isSelected())
+        {
+            nameField.clear();
+            helloButton.setDisable(true);
+            goodbyeButton.setDisable(true);
         }
     }
 
@@ -55,8 +60,24 @@ public class MainController
     }
 
     @FXML
+    public void handleChange()
+    {
+        System.out.println("CheckBox Status: " + (this.checkBox.isSelected() ? "checked" : "unchecked"));
+    }
+
+    @FXML
     public void handleKeyReleased() {
         helloButton.setDisable(textFieldIsEmpty());
         goodbyeButton.setDisable(textFieldIsEmpty());
+    }
+
+    private void simulateApplicationDeadlock()
+    {
+        try
+        {
+            Thread.sleep(10000);
+        } catch (InterruptedException ex) {
+            ex.printStackTrace();
+        }
     }
 }

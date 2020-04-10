@@ -9,5 +9,5 @@
     <Button fx:id="helloButton" text="Hello" GridPane.rowIndex="0" GridPane.columnIndex="1" onAction="#onButtonClicked"/>
     <Button fx:id="goodbyeButton" text="Goodbye" GridPane.rowIndex="0" GridPane.columnIndex="2" onAction="#onButtonClicked"/>
     <CheckBox fx:id="checkBox" text="Clear the field after saying hello or goodbye" GridPane.rowIndex="2"
-                GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+                GridPane.columnIndex="0" GridPane.columnSpan="2" onAction="#handleChange"/>
 </GridPane>
