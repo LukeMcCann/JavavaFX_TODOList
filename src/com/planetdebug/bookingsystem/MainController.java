@@ -3,6 +3,7 @@ package com.planetdebug.bookingsystem;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 
 public class MainController
@@ -14,6 +15,8 @@ public class MainController
     private Button helloButton;
     @FXML
     private Button goodbyeButton;
+    @FXML
+    private CheckBox checkBox;
 
     @FXML
     public void initialize() {
@@ -31,17 +34,24 @@ public class MainController
 //        System.out.println("The following button was pressed: " + e.getSource());
         if(e.getSource().equals(helloButton))
         {
-            System.out.println("Hello, " + this.nameField.getText());
+            say("Hello, " + this.nameField.getText());
+            if(this.checkBox.isSelected()) { nameField.clear(); }
         }
         else if(e.getSource().equals(goodbyeButton))
         {
-            System.out.println("Goodbye, " + this.nameField.getText());
+            say("Goodbye, " + this.nameField.getText());
+            if(this.checkBox.isSelected()) { nameField.clear(); }
         }
     }
 
     private boolean textFieldIsEmpty()
     {
         return(nameField.getText().trim().isEmpty());
+    }
+
+    private void say(String msg)
+    {
+        System.out.println(msg);
     }
 
     @FXML
