@@ -29,7 +29,6 @@ public class MainController
     {
 //        System.out.println("Hello, " + this.nameField.getText());
 //        System.out.println("The following button was pressed: " + e.getSource());
-
         if(e.getSource().equals(helloButton))
         {
             System.out.println("Hello, " + this.nameField.getText());
@@ -42,7 +41,7 @@ public class MainController
 
     private boolean textFieldIsEmpty()
     {
-        return(nameField.getText().isEmpty() || nameField.getText().trim().isEmpty());
+        return(nameField.getText().trim().isEmpty());
     }
 
     @FXML
