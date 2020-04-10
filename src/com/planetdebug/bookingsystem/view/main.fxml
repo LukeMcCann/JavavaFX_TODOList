@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
 <GridPane fx:controller="com.planetdebug.bookingsystem.MainController" xmlns:fx="http://javafx.com/fxml"
           alignment="CENTER" hgap="10" vgap="10">
     <TextField fx:id="nameField" GridPane.rowIndex="0" GridPane.columnIndex="0" onKeyReleased="#handleKeyReleased"/>
@@ -10,4 +11,5 @@
     <Button fx:id="goodbyeButton" text="Goodbye" GridPane.rowIndex="0" GridPane.columnIndex="2" onAction="#onButtonClicked"/>
     <CheckBox fx:id="checkBox" text="Clear the field after saying hello or goodbye" GridPane.rowIndex="2"
                 GridPane.columnIndex="0" GridPane.columnSpan="2" onAction="#handleChange"/>
+    <Label fx:id="label1" text="Nothing has happened" GridPane.rowIndex="3" GridPane.columnIndex="0" />
 </GridPane>
