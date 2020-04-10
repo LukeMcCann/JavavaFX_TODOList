@@ -12,7 +12,7 @@ public class Main extends Application
     public void start(Stage primaryStage) throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("view/main.fxml"));
-        primaryStage.setTitle("JavaFX_Controls");
+        primaryStage.setTitle("JavaFX_TODO:");
         primaryStage.setScene(new Scene(root, 800, 500));
         primaryStage.show();
     }
