@@ -1,4 +1,4 @@
-package com.planetdebug.bookingsystem;
+package com.planetdebug.todolist;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -12,8 +12,8 @@ public class Main extends Application
     public void start(Stage primaryStage) throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("view/main.fxml"));
-        primaryStage.setTitle("JavaFX_TODO:");
-        primaryStage.setScene(new Scene(root, 800, 500));
+        primaryStage.setTitle("JavaFX_TODOList:");
+        primaryStage.setScene(new Scene(root, 900, 500));
         primaryStage.show();
     }
 

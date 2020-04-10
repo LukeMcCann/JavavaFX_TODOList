@@ -46,4 +46,4 @@ _________________
 
 # Project Aim
 
-Sandbox project for prototyping a GUI.git
+Sandbox project for prototyping a GUI.

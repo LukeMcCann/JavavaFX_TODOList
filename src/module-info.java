@@ -3,5 +3,5 @@ module RoomBookingSystem {
     requires javafx.controls;
     requires java.lookAndFeel;
 
-    opens com.planetdebug.bookingsystem;
+    opens com.planetdebug.todolist;
 }

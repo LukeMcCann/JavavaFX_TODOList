@@ -1,0 +1,6 @@
+<!--To use the java graphics repository the JAR must be added to dependencies as well as module-info-->
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:controller="com.planetdebug.todolist.MainController" xmlns:fx="http://javafx.com/fxml">
+
+</BorderPane>
