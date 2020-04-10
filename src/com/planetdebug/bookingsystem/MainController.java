@@ -1,5 +1,6 @@
 package com.planetdebug.bookingsystem;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -39,6 +40,9 @@ public class MainController
             say("Goodbye, " + this.nameField.getText());
         }
 
+        // Working with nodes on the scene graph must be performed on th JavaFX scene thread
+        // this is to stop thread X overwriting thread Y.
+
         Runnable task = new Runnable()
         {
             @Override
@@ -47,11 +51,19 @@ public class MainController
                 try
                 {
                     Thread.sleep(10000);
-                    label1.setText("We did something!");
+
+                    // Forces thread to run on UI thread.
+                    Platform.runLater(new Runnable()
+                    {
+                        @Override
+                        public void run()
+                        {
+                            label1.setText("We did something!");
+                        }
+                    });
                 } catch (InterruptedException ie) {
                     ie.printStackTrace();
                 }
-
             }
         };
 
