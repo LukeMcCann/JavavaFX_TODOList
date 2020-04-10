@@ -50,6 +50,8 @@ public class MainController
             {
                 try
                 {
+                    String s = Platform.isFxApplicationThread() ? "UI Thread" : "Background Thread";
+                    System.out.println("I'm going to sleep on the : " + s);
                     Thread.sleep(10000);
 
                     // Forces thread to run on UI thread.
@@ -58,6 +60,8 @@ public class MainController
                         @Override
                         public void run()
                         {
+                            String s = Platform.isFxApplicationThread() ? "UI Thread" : "Background Thread";
+                            System.out.println("I'm updating the label on the : " + s);
                             label1.setText("We did something!");
                         }
                     });
