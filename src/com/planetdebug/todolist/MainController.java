@@ -9,6 +9,7 @@ import javafx.scene.control.TextArea;
 
 import java.time.LocalDate;
 import java.time.Month;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,8 +28,8 @@ public class MainController
     {
         addDummyData();
         listenForListViewChanges();
-        todoListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
-        todoListView.getSelectionModel().selectFirst();
+        this.todoListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+        this.todoListView.getSelectionModel().selectFirst();
     }
 
     private void addDummyData()
@@ -45,7 +46,7 @@ public class MainController
         TodoItem item4 = new TodoItem("Advanced Software Development", "Build a RoomBooking application",
                 LocalDate.of(2020, Month.MAY, 1));
 
-        TodoItem item5 = new TodoItem("Exit Lockdown", "Build a RoomBooking application",
+        TodoItem item5 = new TodoItem("Exit Lockdown", "End of isolation!",
                 LocalDate.of(2021, Month.MARCH, 14));
 
         todoItems = new ArrayList<>();
@@ -64,7 +65,8 @@ public class MainController
             if (newValue != null) {
                 TodoItem item = todoListView.getSelectionModel().getSelectedItem();
                 this.itemDetailsTextArea.setText(item.getDetails());
-                this.deadlineLabel.setText(item.getDeadline().toString());
+                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MMMM d, YYYY");
+                this.deadlineLabel.setText(dtf.format(item.getDeadline()));
             }
         });
     }
