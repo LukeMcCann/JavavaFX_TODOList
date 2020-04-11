@@ -19,6 +19,11 @@ public class MainController
 
     public void initialize()
     {
+        addDummyData();
+    }
+
+    private void addDummyData()
+    {
         TodoItem item1 = new TodoItem("Attain a Developer job", "Attain employment as a developer",
                 LocalDate.of(2020, Month.APRIL, 13));
 
@@ -43,5 +48,16 @@ public class MainController
 
         todoListView.getItems().setAll(todoItems);
         todoListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+    }
+    @FXML
+    public void handleClickListView()
+    {
+        TodoItem item = getSelectedItem();
+        System.out.println("Selected: "+item);
+    }
+
+    private TodoItem getSelectedItem()
+    {
+        return (TodoItem) todoListView.getSelectionModel().getSelectedItem();
     }
 }
