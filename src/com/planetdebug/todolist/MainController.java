@@ -57,11 +57,18 @@ public class MainController
     public void handleClickListView()
     {
         TodoItem item = getSelectedItem();
-        itemDetailsTextArea.setText(item.getDetails());
+        itemDetailsTextArea.setText(getCompleteDescriptionString(item));
+    }
+
+    private String getCompleteDescriptionString(TodoItem item)
+    {
+        return (item.getDetails() + "\n\n\n" +
+                "Due: " +
+                item.getDeadline().toString());
     }
 
     private TodoItem getSelectedItem()
     {
-        return (TodoItem) todoListView.getSelectionModel().getSelectedItem();
+        return todoListView.getSelectionModel().getSelectedItem();
     }
 }
