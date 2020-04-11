@@ -2,6 +2,7 @@ package com.planetdebug.todolist;
 
 import com.planetdebug.todolist.model.TodoItem;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextArea;
@@ -19,6 +20,8 @@ public class MainController
     private ListView<TodoItem> todoListView;
     @FXML
     private TextArea itemDetailsTextArea;
+    @FXML
+    private Label deadlineLabel;
 
     public void initialize()
     {
@@ -57,18 +60,20 @@ public class MainController
     public void handleClickListView()
     {
         TodoItem item = getSelectedItem();
-        itemDetailsTextArea.setText(getCompleteDescriptionString(item));
-    }
-
-    private String getCompleteDescriptionString(TodoItem item)
-    {
-        return (item.getDetails() + "\n\n\n" +
-                "Due: " +
-                item.getDeadline().toString());
+        itemDetailsTextArea.setText(item.getDetails());
+        deadlineLabel.setText(item.getDeadline().toString());
     }
 
     private TodoItem getSelectedItem()
     {
         return todoListView.getSelectionModel().getSelectedItem();
     }
+
+    // Used during development for testing basic functionality
+//    private String getCompleteDescriptionString(TodoItem item)
+//    {
+//        return (item.getDetails() + "\n\n\n" +
+//                "Due: " +
+//                item.getDeadline().toString());
+//    }
 }
