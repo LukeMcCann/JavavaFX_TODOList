@@ -9,6 +9,10 @@
         </ListView>
     </left>
     <center>
-        <TextArea fx:id="itemDetailsTextArea"/>
+        <VBox>
+            <TextArea fx:id="itemDetailsTextArea"/>
+            <HBox>
+            </HBox>
+        </VBox>
     </center>
 </BorderPane>
