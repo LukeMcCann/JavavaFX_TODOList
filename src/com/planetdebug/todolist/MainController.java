@@ -4,6 +4,7 @@ import com.planetdebug.todolist.model.TodoItem;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
+import javafx.scene.control.TextArea;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -15,7 +16,9 @@ public class MainController
     private List<TodoItem> todoItems;
 
     @FXML
-    private ListView todoListView;
+    private ListView<TodoItem> todoListView;
+    @FXML
+    private TextArea itemDetailsTextArea;
 
     public void initialize()
     {
@@ -49,11 +52,12 @@ public class MainController
         todoListView.getItems().setAll(todoItems);
         todoListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
+
     @FXML
     public void handleClickListView()
     {
         TodoItem item = getSelectedItem();
-        System.out.println("Selected: "+item);
+        itemDetailsTextArea.setText(item.getDetails());
     }
 
     private TodoItem getSelectedItem()
