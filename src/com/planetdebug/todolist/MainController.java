@@ -63,11 +63,15 @@ public class MainController
     {
         todoListView.getSelectionModel().selectedItemProperty().addListener((observableValue, oldValue, newValue) -> {
             if (newValue != null) {
-                TodoItem item = todoListView.getSelectionModel().getSelectedItem();
-                this.itemDetailsTextArea.setText(item.getDetails());
-                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MMMM d, YYYY");
-                this.deadlineLabel.setText(dtf.format(item.getDeadline()));
+                updateListView(todoListView.getSelectionModel().getSelectedItem());
             }
         });
+    }
+
+    private void updateListView(TodoItem item)
+    {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MMMM d, YYYY");
+        this.itemDetailsTextArea.setText(item.getDetails());
+        this.deadlineLabel.setText(dtf.format(item.getDeadline()));
     }
 }
