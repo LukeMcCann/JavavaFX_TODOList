@@ -26,6 +26,9 @@ public class MainController
     public void initialize()
     {
         addDummyData();
+        listenForListViewChanges();
+        todoListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+        todoListView.getSelectionModel().selectFirst();
     }
 
     private void addDummyData()
@@ -53,27 +56,16 @@ public class MainController
         todoItems.add(item5);
 
         todoListView.getItems().setAll(todoItems);
-        todoListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
 
-    @FXML
-    public void handleClickListView()
+    private void listenForListViewChanges()
     {
-        TodoItem item = getSelectedItem();
-        itemDetailsTextArea.setText(item.getDetails());
-        deadlineLabel.setText(item.getDeadline().toString());
+        todoListView.getSelectionModel().selectedItemProperty().addListener((observableValue, oldValue, newValue) -> {
+            if (newValue != null) {
+                TodoItem item = todoListView.getSelectionModel().getSelectedItem();
+                this.itemDetailsTextArea.setText(item.getDetails());
+                this.deadlineLabel.setText(item.getDeadline().toString());
+            }
+        });
     }
-
-    private TodoItem getSelectedItem()
-    {
-        return todoListView.getSelectionModel().getSelectedItem();
-    }
-
-    // Used during development for testing basic functionality
-//    private String getCompleteDescriptionString(TodoItem item)
-//    {
-//        return (item.getDetails() + "\n\n\n" +
-//                "Due: " +
-//                item.getDeadline().toString());
-//    }
 }
